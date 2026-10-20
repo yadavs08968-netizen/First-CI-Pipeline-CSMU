@@ -1,0 +1,17 @@
+
+"""Program 29: Check whether a number is an Armstrong number."""
+
+
+def is_armstrong(number):
+    """Return True if number is an Armstrong number, otherwise False."""
+    if number < 0:
+        return False
+
+    digits = str(number)
+    power = len(digits)
+    total = 0
+
+    for digit in digits:
+        total += int(digit) ** power
+
+    return total == number
